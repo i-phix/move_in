@@ -1,0 +1,29 @@
+{
+  "short_name": "Move-In",
+  "name": "Move-In Kenya — Rent Homes in Nairobi",
+  "description": "Find verified rental homes in Nairobi. Book viewings, apply and move in — 100% online.",
+  "icons": [
+    {
+      "src": "images/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f5a623",
+  "background_color": "#fffdf7",
+  "categories": ["real estate", "housing", "property"],
+  "lang": "en-KE",
+  "orientation": "portrait-primary"
+}

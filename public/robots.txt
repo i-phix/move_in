@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /listings
+Allow: /listings/
+
+Disallow: /move-in/
+Disallow: /admin-login
+Disallow: /landlord-login
+Disallow: /landlord-register
+Disallow: /landlord-entry
+Disallow: /reset-password
+Disallow: /code-verification
+
+Sitemap: https://movein.ke/sitemap.xml

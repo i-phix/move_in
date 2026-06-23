@@ -1,0 +1,208 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2500" viewBox="0 0 1800 2500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="mvpGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="fullGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .title { font: 700 42px Inter, Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 400 20px Inter, Arial, sans-serif; fill: #dbeafe; }
+      .section { font: 700 28px Inter, Arial, sans-serif; fill: #0f172a; }
+      .subsection { font: 700 22px Inter, Arial, sans-serif; fill: #0f172a; }
+      .smallhead { font: 700 18px Inter, Arial, sans-serif; fill: #0f172a; }
+      .body { font: 400 17px Inter, Arial, sans-serif; fill: #334155; }
+      .tiny { font: 400 15px Inter, Arial, sans-serif; fill: #475569; }
+      .pill { font: 700 14px Inter, Arial, sans-serif; fill: #1d4ed8; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #0f172a; }
+      .box { fill: #ffffff; stroke: #dbe4f0; stroke-width: 1.5; rx: 22; ry: 22; filter: url(#shadow); }
+      .soft { fill: #f8fafc; stroke: #dbe4f0; stroke-width: 1.2; rx: 18; ry: 18; }
+      .mvp { fill: url(#mvpGrad); stroke: #93c5fd; stroke-width: 1.5; rx: 24; ry: 24; }
+      .full { fill: url(#fullGrad); stroke: #86efac; stroke-width: 1.5; rx: 24; ry: 24; }
+      .dark { fill: #0f172a; stroke: #1e293b; stroke-width: 1; rx: 18; ry: 18; }
+      .line { stroke: #94a3b8; stroke-width: 2.4; }
+      .blueLine { stroke: #2563eb; stroke-width: 2.8; }
+      .arrow { marker-end: url(#arrowHead); }
+      .arrowBlue { marker-end: url(#arrowHeadBlue); }
+      .whiteLabel { font: 700 16px Inter, Arial, sans-serif; fill: #fff; }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowHeadBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="1800" height="2500" fill="url(#bg)"/>
+
+  <rect x="60" y="40" width="1680" height="220" rx="30" fill="url(#hero)" filter="url(#shadow)"/>
+  <text x="110" y="115" class="title">Move-In by PayServe — System Architecture &amp; Design</text>
+  <text x="110" y="155" class="subtitle">Investor-ready technical blueprint • React.js frontend • Fastify backend • MongoDB data layer • security-first modular platform</text>
+  <rect x="110" y="182" width="240" height="38" rx="19" fill="#dbeafe" opacity="0.18"/>
+  <text x="132" y="207" class="whiteLabel">Modular Monolith → Service-ready</text>
+  <rect x="375" y="182" width="190" height="38" rx="19" fill="#bfdbfe" opacity="0.18"/>
+  <text x="398" y="207" class="whiteLabel">Scalable • Secure • Simple</text>
+  <rect x="590" y="182" width="200" height="38" rx="19" fill="#93c5fd" opacity="0.18"/>
+  <text x="615" y="207" class="whiteLabel">Rental OS for Kenya</text>
+
+  <rect x="60" y="290" width="1680" height="150" class="box"/>
+  <text x="95" y="335" class="section">Architecture Intent</text>
+  <text x="95" y="370" class="body">The platform digitizes the full rental lifecycle: Discovery → Viewing → Application → Screening → Reservation → Payment → Move-In.</text>
+  <text x="95" y="400" class="body">It is designed as a modular Fastify application with strong domain separation, shared security controls, background workers, and infrastructure that scales horizontally.</text>
+
+  <text x="60" y="495" class="section">1. Platform Overview</text>
+  <rect x="60" y="525" width="1680" height="910" class="box"/>
+
+  <text x="95" y="570" class="subsection">User Channels</text>
+  <rect x="95" y="595" width="235" height="80" class="soft"/>
+  <text x="125" y="643" class="smallhead">Tenant Portal</text>
+  <text x="125" y="665" class="tiny">Search • Save • View • Apply</text>
+
+  <rect x="355" y="595" width="235" height="80" class="soft"/>
+  <text x="385" y="643" class="smallhead">Landlord Portal</text>
+  <text x="385" y="665" class="tiny">List • Review • Reserve • Track</text>
+
+  <rect x="615" y="595" width="235" height="80" class="soft"/>
+  <text x="645" y="643" class="smallhead">Caretaker Portal</text>
+  <text x="645" y="665" class="tiny">Verify • Coordinate • Upload</text>
+
+  <rect x="875" y="595" width="235" height="80" class="soft"/>
+  <text x="905" y="643" class="smallhead">Admin Console</text>
+  <text x="905" y="665" class="tiny">Moderate • Approve • Audit</text>
+
+  <rect x="1135" y="595" width="500" height="80" class="soft"/>
+  <text x="1165" y="643" class="smallhead">Frontend Delivery</text>
+  <text x="1165" y="665" class="tiny">React.js SPA • responsive UI • role-based routes • reusable design system</text>
+
+  <rect x="540" y="730" width="720" height="82" class="dark"/>
+  <text x="570" y="778" class="whiteLabel">CDN / WAF / Edge Protection / TLS Termination / Bot Filtering / Rate Limiting</text>
+  <line x1="212" y1="675" x2="212" y2="730" class="line arrow"/>
+  <line x1="472" y1="675" x2="472" y2="730" class="line arrow"/>
+  <line x1="732" y1="675" x2="732" y2="730" class="line arrow"/>
+  <line x1="992" y1="675" x2="992" y2="730" class="line arrow"/>
+  <line x1="1385" y1="675" x2="1385" y2="730" class="line arrow"/>
+
+  <rect x="250" y="860" width="1300" height="120" class="box"/>
+  <text x="285" y="905" class="subsection">Application Entry Layer</text>
+  <text x="285" y="940" class="body">Load Balancer → Fastify API Cluster → Request validation → Auth → Policies → Logging → Serialization → API versioning</text>
+  <line x1="900" y1="812" x2="900" y2="860" class="blueLine arrowBlue"/>
+
+  <text x="95" y="1035" class="subsection">Core Business Domains</text>
+  <rect x="95" y="1060" width="490" height="290" class="soft"/>
+  <text x="120" y="1100" class="smallhead">Identity, Access &amp; Profiles</text>
+  <text x="120" y="1132" class="tiny">• Auth &amp; Identity</text>
+  <text x="120" y="1158" class="tiny">• User Profiles</text>
+  <text x="120" y="1184" class="tiny">• RBAC + Policy Checks</text>
+  <text x="120" y="1210" class="tiny">• Sessions / Token Rotation</text>
+  <text x="120" y="1236" class="tiny">• MFA-ready controls</text>
+  <text x="120" y="1262" class="tiny">• Audit hooks for sensitive actions</text>
+
+  <rect x="615" y="1060" width="490" height="290" class="soft"/>
+  <text x="640" y="1100" class="smallhead">Rental Transaction Engine</text>
+  <text x="640" y="1132" class="tiny">• Properties / Units / Listings</text>
+  <text x="640" y="1158" class="tiny">• Verification &amp; Trust</text>
+  <text x="640" y="1184" class="tiny">• Viewing Scheduler</text>
+  <text x="640" y="1210" class="tiny">• Applications &amp; Screening</text>
+  <text x="640" y="1236" class="tiny">• Reservations &amp; Payment Orchestration</text>
+  <text x="640" y="1262" class="tiny">• Messaging &amp; Notifications</text>
+
+  <rect x="1135" y="1060" width="415" height="290" class="soft"/>
+  <text x="1160" y="1100" class="smallhead">Shared Platform Services</text>
+  <text x="1160" y="1132" class="tiny">• Search indexing</text>
+  <text x="1160" y="1158" class="tiny">• File/document service</text>
+  <text x="1160" y="1184" class="tiny">• Reporting / analytics summaries</text>
+  <text x="1160" y="1210" class="tiny">• Admin moderation tools</text>
+  <text x="1160" y="1236" class="tiny">• Notification dispatch</text>
+  <text x="1160" y="1262" class="tiny">• Audit/event logging</text>
+
+  <line x1="900" y1="980" x2="900" y2="1060" class="blueLine arrowBlue"/>
+
+  <rect x="140" y="1390" width="500" height="35" rx="17" fill="#dbeafe"/>
+  <text x="168" y="1413" class="pill">Data &amp; Infrastructure Layer</text>
+
+  <rect x="95" y="1450" width="520" height="260" class="box"/>
+  <text x="120" y="1490" class="smallhead">MongoDB Cluster</text>
+  <text x="120" y="1520" class="tiny">Replica set for availability; designed to evolve toward sharding as scale grows.</text>
+  <text x="120" y="1558" class="mono">collections:</text>
+  <text x="120" y="1586" class="tiny">users, landlords, tenants, caretakers, properties, units, listings</text>
+  <text x="120" y="1612" class="tiny">verification_records, viewing_slots, viewing_bookings, applications</text>
+  <text x="120" y="1638" class="tiny">screening_reviews, reservations, payments, conversations, messages</text>
+  <text x="120" y="1664" class="tiny">notifications, audit_logs</text>
+
+  <rect x="650" y="1450" width="420" height="260" class="box"/>
+  <text x="675" y="1490" class="smallhead">Redis + BullMQ Worker Runtime</text>
+  <text x="675" y="1520" class="tiny">Async jobs and cache:</text>
+  <text x="675" y="1554" class="tiny">• viewing reminders</text>
+  <text x="675" y="1580" class="tiny">• stale listing expiry</text>
+  <text x="675" y="1606" class="tiny">• payment reconciliation</text>
+  <text x="675" y="1632" class="tiny">• notification dispatch</text>
+  <text x="675" y="1658" class="tiny">• media processing / optimization</text>
+
+  <rect x="1105" y="1450" width="445" height="260" class="box"/>
+  <text x="1130" y="1490" class="smallhead">External Integrations</text>
+  <text x="1130" y="1522" class="tiny">• Mobile money / card / bank payments</text>
+  <text x="1130" y="1548" class="tiny">• SMS / Email providers</text>
+  <text x="1130" y="1574" class="tiny">• Maps / geolocation</text>
+  <text x="1130" y="1600" class="tiny">• Object storage for images, videos, KYC, proofs</text>
+  <text x="1130" y="1626" class="tiny">• Search engine (future Meilisearch / OpenSearch)</text>
+  <text x="1130" y="1652" class="tiny">• Error tracking and observability stack</text>
+
+  <line x1="900" y1="1350" x2="355" y2="1450" class="line arrow"/>
+  <line x1="900" y1="1350" x2="860" y2="1450" class="line arrow"/>
+  <line x1="900" y1="1350" x2="1328" y2="1450" class="line arrow"/>
+
+  <text x="60" y="1775" class="section">2. Security, Reliability &amp; Operating Controls</text>
+  <rect x="60" y="1805" width="820" height="345" class="box"/>
+  <text x="95" y="1845" class="subsection">Security-by-Design</text>
+  <text x="95" y="1880" class="tiny">• HTTPS everywhere, token auth, refresh rotation, session revocation</text>
+  <text x="95" y="1908" class="tiny">• Role-based access control + ownership / policy authorization</text>
+  <text x="95" y="1936" class="tiny">• Strong request validation at API boundary (Fastify schemas)</text>
+  <text x="95" y="1964" class="tiny">• Secure file upload pipeline, signed URLs, content checks, private access</text>
+  <text x="95" y="1992" class="tiny">• Audit logs for logins, listing changes, approvals, payments, admin actions</text>
+  <text x="95" y="2020" class="tiny">• Sensitive fields protected with encryption and strict retrieval rules</text>
+  <text x="95" y="2048" class="tiny">• Admin privileged actions prepared for MFA / step-up auth</text>
+
+  <rect x="920" y="1805" width="820" height="345" class="box"/>
+  <text x="955" y="1845" class="subsection">Reliability &amp; Observability</text>
+  <text x="955" y="1880" class="tiny">• Horizontal API scaling behind a load balancer</text>
+  <text x="955" y="1908" class="tiny">• Health checks, rolling deploys, stateless Fastify instances</text>
+  <text x="955" y="1936" class="tiny">• Centralized logs, metrics, traces, alerts, and error monitoring</text>
+  <text x="955" y="1964" class="tiny">• Backup and recovery strategy for database and object storage</text>
+  <text x="955" y="1992" class="tiny">• Queue-backed retries for notifications, media jobs, and payment callbacks</text>
+  <text x="955" y="2020" class="tiny">• Cache layer to reduce database pressure on search and dashboard queries</text>
+  <text x="955" y="2048" class="tiny">• Secrets and configuration managed outside application code</text>
+
+  <text x="60" y="2215" class="section">3. Product Delivery Structure — MVP vs Full System</text>
+
+  <rect x="60" y="2245" width="810" height="210" class="mvp"/>
+  <text x="95" y="2288" class="subsection">MVP Architecture</text>
+  <text x="95" y="2322" class="tiny">Goal: prove the transactional rental funnel.</text>
+  <text x="95" y="2354" class="tiny">Included domains: Listings • Verification • Search • Viewing Scheduler • Applications • Reservations • Payments • Messaging • Admin Moderation • Notifications • Audit Logs</text>
+  <text x="95" y="2386" class="tiny">Technical form: single React frontend + single Fastify modular monolith + MongoDB + Redis/BullMQ + object storage.</text>
+  <text x="95" y="2418" class="tiny">Business flow: Listing → Verification → Search → Viewing → Application → Approval → Reservation → Payment.</text>
+
+  <rect x="930" y="2245" width="810" height="210" class="full"/>
+  <text x="965" y="2288" class="subsection">Full System Architecture</text>
+  <text x="965" y="2322" class="tiny">Goal: evolve into a complete rental operating system.</text>
+  <text x="965" y="2354" class="tiny">Expanded domains: Screening Engine • Lease Management • Tenancy Lifecycle • Rent Collection • Maintenance • Inspections • Search Engine • Recommendation Engine • Analytics / BI • Compliance / Disputes</text>
+  <text x="965" y="2386" class="tiny">Technical form: modular monolith with selective service extraction for messaging, payments, search, analytics, and media processing.</text>
+  <text x="965" y="2418" class="tiny">Outcome: operational platform for landlords, tenants, caretakers, and administrators.</text>
+
+  <text x="60" y="2485" class="tiny">Prepared for investor presentation — Move-In by PayServe — architecture emphasizes trusted rentals, modern web infrastructure, and service-ready growth.</text>
+</svg>
